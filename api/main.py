@@ -37,18 +37,18 @@ async def player_plays(action: Action):
     }
 
 
-def handle_result(action: Gesture, server: Gesture):
-    if action == server:
+def handle_result(player: Gesture, server: Gesture):
+    if player == server:
         return Result.draw
-    if action == Gesture.rock and server == Gesture.paper:
+    if player == Gesture.rock and server == Gesture.paper:
         return Result.loss
-    if action == Gesture.paper and server == Gesture.scissors:
+    if player == Gesture.paper and server == Gesture.scissors:
         return Result.loss
-    if action == Gesture.scissors and server == Gesture.rock:
+    if player == Gesture.scissors and server == Gesture.rock:
         return Result.loss
-    if action == Gesture.rock and server == Gesture.scissors:
+    if player == Gesture.rock and server == Gesture.scissors:
         return Result.win
-    if action == Gesture.paper and server == Gesture.rock:
+    if player == Gesture.paper and server == Gesture.rock:
         return Result.win
-    if action == Gesture.scissors and server == Gesture.paper:
+    if player == Gesture.scissors and server == Gesture.paper:
         return Result.win
