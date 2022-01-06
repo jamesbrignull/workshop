@@ -32,7 +32,7 @@ async def player_plays(action: Action):
         "gameId": "abc-defg-hijk",
         "playerPlayed": action.playerPlayed,
         "serverPlayed": server_action,
-        "result": handle_result(action.playerPlayed, server_action),  # determine win/loss
+        "result": handle_result(action.playerPlayed, server_action),
         "timestamp": "2021-12-01T10:10:00Z"
     }
 
